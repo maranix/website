@@ -1,0 +1,29 @@
+---
+interface Props {
+  href: string;
+  content: string;
+}
+
+const { href, content } = Astro.props;
+
+const isActive = Astro.url.pathname.split("/").at(1) === href;
+---
+
+<a class=`${isActive ? "is-active" : "not-active"}` href={href}>{content}</a>
+
+<style>
+  a {
+    margin: 0 1rem;
+  }
+  .is-active {
+    color: var(--text-color);
+  }
+
+  .not-active {
+    color: var(--text-alt-color);
+  }
+
+  a:hover {
+    color: var(--text-color);
+  }
+</style>

@@ -1,3 +1,32 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+---
+
 <header>
-  <nav></nav>
+  <nav class="box-row-sb">
+    <a href="#">raman verma</a>
+    <div>
+      <HeaderLink href="works" content="works" />
+      <HeaderLink href="blogs" content="blogs" />
+    </div>
+  </nav>
 </header>
+
+<style>
+  nav {
+    width: inherit;
+    background: rgb(var(--bento-nav-color));
+
+    border-radius: 20px;
+
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .box-row-sb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>

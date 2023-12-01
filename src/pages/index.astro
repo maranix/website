@@ -9,10 +9,51 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      main {
+        height: 90svh;
+        width: 100%;
+      }
+      .grid-main {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        gap: 1rem;
+      }
+      .intro-grid {
+        grid-column: 1 / span 7;
+        grid-row: 1 / -1;
+      }
+      .nav-grid {
+        grid-column: 8;
+        grid-row: 1 / span 3;
+      }
+      .social-grid {
+        grid-column: 8;
+        grid-row: 4 / -1;
+      }
+      .bento-box-decoration {
+        padding: 1rem;
+        border-radius: 5px;
+      }
+
+      #intro {
+        background-color: #bee1e6;
+      }
+      #nav-item {
+        background-color: #cddafd;
+      }
+      #social {
+        background-color: #eae4e9;
+      }
+    </style>
   </head>
   <body>
     <Header title={SITE_TITLE} />
-    <main></main>
+    <main class="grid-main">
+      <div id="intro" class="intro-grid bento-box-decoration"></div>
+      <div id="social" class="social-grid bento-box-decoration"></div>
+    </main>
     <Footer />
   </body>
 </html>

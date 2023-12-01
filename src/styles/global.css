@@ -5,7 +5,9 @@
  */
 
 :root {
-  --accent: #2337ff;
+  --bento-nav-color: 205, 218, 253;
+  --text-color: black;
+  --text-alt-color: grey;
 }
 @font-face {
   font-family: "Atkinson";
@@ -23,9 +25,16 @@
 }
 body {
   font-family: "Atkinson", sans-serif;
+  background: black;
 }
 main {
-  width: 720px;
-  max-width: calc(100% - 2em);
+  max-height: 1080px;
+  max-width: 1920px;
   margin: auto;
+}
+a {
+  color: var(--text-color);
+  text-decoration: none;
+
+  padding: 1rem;
 }
