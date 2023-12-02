@@ -10,21 +10,28 @@
   --text-alt-color: grey;
 }
 @font-face {
-  font-family: "Atkinson";
-  src: url("/fonts/atkinson-regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Atkinson";
-  src: url("/fonts/atkinson-bold.woff") format("woff");
+  font-family: "Karantina";
+  src: url("/fonts/Karantina-Bold.ttf");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 body {
-  font-family: "Atkinson", sans-serif;
+  font-family: "Poppins", sans-serif;
   background: black;
 }
 main {
@@ -35,6 +42,26 @@ main {
 a {
   color: var(--text-color);
   text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Karantina", Arial, Helvetica, sans-serif;
 
+  margin: 0;
+}
+.box-row-end-sb {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+.p-1rem {
   padding: 1rem;
+}
+.p-2rem {
+  padding: 2rem;
 }

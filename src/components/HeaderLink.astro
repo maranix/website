@@ -9,7 +9,9 @@ const { href, content } = Astro.props;
 const isActive = Astro.url.pathname.split("/").at(1) === href;
 ---
 
-<a class=`${isActive ? "is-active" : "not-active"}` href={href}>{content}</a>
+<a class=`${isActive ? "is-active" : "not-active"} p-1rem` href={href}
+  >{content}</a
+>
 
 <style>
   a {
@@ -18,11 +20,9 @@ const isActive = Astro.url.pathname.split("/").at(1) === href;
   .is-active {
     color: var(--text-color);
   }
-
   .not-active {
     color: var(--text-alt-color);
   }
-
   a:hover {
     color: var(--text-color);
   }

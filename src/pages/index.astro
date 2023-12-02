@@ -10,10 +10,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style>
-      main {
-        height: 90svh;
-        width: 100%;
-      }
       .grid-main {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
@@ -33,11 +29,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         grid-row: 4 / -1;
       }
       .bento-box-decoration {
-        padding: 1rem;
         border-radius: 5px;
       }
 
       #intro {
+        padding-top: 6rem;
         background-color: #bee1e6;
       }
       #nav-item {
@@ -46,12 +42,41 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
       #social {
         background-color: #eae4e9;
       }
+
+      h1 {
+        width: 50%;
+        font-size: 7.5vw;
+      }
+
+      p {
+        width: 40%;
+
+        font-size: 1.5vw;
+      }
     </style>
   </head>
   <body>
     <Header title={SITE_TITLE} />
     <main class="grid-main">
-      <div id="intro" class="intro-grid bento-box-decoration"></div>
+      <div
+        id="intro"
+        class="intro-grid bento-box-decoration box-row-end-sb p-2rem"
+      >
+        <h1>
+          Mobile App Developer with Versatility in Web and Backend Technologies
+        </h1>
+        <p>
+          My passion for coding ignited during childhood as I immersed myself in
+          computer games, captivated by the joy they provided. Growing up amidst
+          the internet revolution, smartphones, and technological strides, my
+          interest evolved into a pursuit of understanding the underlying
+          concepts. Presently, My proficiency and expertise lies in Mobile App
+          Development, while also exploring the realms of Backend, and Web
+          domains. My dedication to ongoing growth is evident through
+          substantial contributions to diverse development projects, fostering
+          positive impact to my surroundings.
+        </p>
+      </div>
       <div id="social" class="social-grid bento-box-decoration"></div>
     </main>
     <Footer />
