@@ -3,6 +3,8 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { Picture } from "astro:assets";
+import headshot from "./public/headshot.png";
 ---
 
 <!doctype html>
@@ -24,9 +26,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         grid-column: 8;
         grid-row: 1 / span 3;
       }
+      .headshot-grid {
+        grid-column: 8;
+        grid-row: 1 / span 2;
+      }
       .social-grid {
         grid-column: 8;
-        grid-row: 4 / -1;
+        grid-row: 3 / -1;
       }
       .bento-box-decoration {
         border-radius: 5px;
@@ -47,11 +53,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         width: 50%;
         font-size: 7.5vw;
       }
-
       p {
         width: 40%;
 
         font-size: 1.5vw;
+      }
+
+      img {
+        height: auto;
+        width: 100%;
+        border-radius: 50%;
       }
     </style>
   </head>
@@ -76,6 +87,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
           substantial contributions to diverse development projects, fostering
           positive impact to my surroundings.
         </p>
+      </div>
+      <div id="headshot" class="headshot-grid">
+        <Picture src={headshot} alt="Yes, this is me" />
       </div>
       <div id="social" class="social-grid bento-box-decoration"></div>
     </main>
