@@ -1,0 +1,27 @@
+---
+interface Props {
+  id: string;
+  style?: string;
+}
+
+const { id, style = "min-w-[100px]" } = Astro.props;
+
+/// ???????????????????
+/// Why am i doing this
+/// ???????????????????
+let slots: any[] = [];
+
+Object.keys(Astro.slots).forEach((item) =>
+  slots.push(Astro.slots.render(item))
+);
+
+let render = await Promise.all(slots);
+
+let elements = render[0]
+  .split("</a>")
+  .map((item: string) => `<li>${item}</a></li>`);
+---
+
+<ul id={id} class={style}>
+  {elements.map((el: string) => <Fragment set:html={el} />)}
+</ul>

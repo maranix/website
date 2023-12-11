@@ -1,98 +1,25 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import { Picture } from "astro:assets";
-import headshot from "./public/headshot.png";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import Page from "../layouts/Page.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <style>
-      .grid-main {
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        gap: 1rem;
-      }
-      .intro-grid {
-        grid-column: 1 / span 7;
-        grid-row: 1 / -1;
-      }
-      .nav-grid {
-        grid-column: 8;
-        grid-row: 1 / span 3;
-      }
-      .headshot-grid {
-        grid-column: 8;
-        grid-row: 1 / span 2;
-      }
-      .social-grid {
-        grid-column: 8;
-        grid-row: 3 / -1;
-      }
-      .bento-box-decoration {
-        border-radius: 5px;
-      }
-
-      #intro {
-        padding-top: 6rem;
-        background-color: #bee1e6;
-      }
-      #nav-item {
-        background-color: #cddafd;
-      }
-      #social {
-        background-color: #eae4e9;
-      }
-
-      h1 {
-        width: 50%;
-        font-size: 7.5vw;
-      }
-      p {
-        width: 40%;
-
-        font-size: 1.5vw;
-      }
-
-      img {
-        height: auto;
-        width: 100%;
-        border-radius: 50%;
-      }
-    </style>
-  </head>
-  <body>
-    <Header title={SITE_TITLE} />
-    <main class="grid-main">
-      <div
-        id="intro"
-        class="intro-grid bento-box-decoration box-row-end-sb p-2rem"
-      >
-        <h1>
-          Mobile App Developer with Versatility in Web and Backend Technologies
-        </h1>
-        <p>
-          My passion for coding ignited during childhood as I immersed myself in
-          computer games, captivated by the joy they provided. Growing up amidst
-          the internet revolution, smartphones, and technological strides, my
-          interest evolved into a pursuit of understanding the underlying
-          concepts. Presently, My proficiency and expertise lies in Mobile App
-          Development, while also exploring the realms of Backend, and Web
-          domains. My dedication to ongoing growth is evident through
-          substantial contributions to diverse development projects, fostering
-          positive impact to my surroundings.
-        </p>
-      </div>
-      <div id="headshot" class="headshot-grid">
-        <Picture src={headshot} alt="Yes, this is me" />
-      </div>
-      <div id="social" class="social-grid bento-box-decoration"></div>
-    </main>
-    <Footer />
-  </body>
-</html>
+<Page title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <main class="m-auto max-w-[1280px] p-6">
+    <section id="intro">
+      <h1 class="font-sans text-6xl font-bold text-secondary mb-6">
+        Raman Verma
+      </h1>
+      <h2 class="font-sans text-4xl font-bold">
+        Software Developer<br />
+         Creating Interoperable<br />
+         Platform Solutions
+      </h2>
+    </section>
+    <!-- <section id="work" class="mt-24">
+      <h3 class="font-sans text-6xl font-bold">Work</h3>
+    </section>
+    <section id="blog" class="mt-24">
+      <h4 class="font-sans text-6xl font-bold">Article</h4>
+    </section> -->
+  </main>
+</Page>

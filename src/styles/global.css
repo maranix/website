@@ -1,67 +1,18 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --bento-nav-color: 205, 218, 253;
-  --text-color: black;
-  --text-alt-color: grey;
-}
 @font-face {
-  font-family: "Karantina";
-  src: url("/fonts/Karantina-Bold.ttf");
-  font-weight: 700;
+  font-family: "Inter";
+  src: url("/fonts/Inter-VariableFont_slnt,wght.ttf");
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "Poppins";
-  src: url("/fonts/Poppins-Bold.ttf");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Poppins";
-  src: url("/fonts/Poppins-Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-body {
-  font-family: "Poppins", sans-serif;
-  background: black;
-}
-main {
-  max-height: 1080px;
-  max-width: 1920px;
-  margin: auto;
-}
-a {
-  color: var(--text-color);
-  text-decoration: none;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Karantina", Arial, Helvetica, sans-serif;
 
-  margin: 0;
-}
-.box-row-end-sb {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: end;
-}
-.p-1rem {
-  padding: 1rem;
-}
-.p-2rem {
-  padding: 2rem;
+@layer base {
+  :root {
+    --color-primary: 60 31% 94%;
+    --color-secondary: 300 1% 58%;
+    --color-background: 300 5% 4%;
+  }
 }
