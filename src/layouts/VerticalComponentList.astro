@@ -17,9 +17,11 @@ Object.keys(Astro.slots).forEach((item) =>
 
 let render = await Promise.all(slots);
 
-let elements = render[0]
+let elements: string[] = render[0]
   .split("</a>")
   .map((item: string) => `<li>${item}</a></li>`);
+
+elements.pop();
 ---
 
 <ul id={id} class={style}>
