@@ -1,4 +1,5 @@
 ---
+import ArticleLink from "../components/ArticleLink.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import Grid from "../layouts/Grid.astro";
 import MasonaryGrid from "../layouts/MasonaryGrid.astro";
@@ -72,28 +73,29 @@ import Page from "../layouts/Page.astro";
     <section id="blog" class="my-24 mt-48">
       <MasonaryGrid id="grid-blog">
         <Grid>
-          <a class="text-4xl">
+          <ArticleLink href="#article-1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </a>
-          <a class="text-4xl">facilis quidem qui est? Eius, reprehenderit.</a>
+          </ArticleLink>
+          <ArticleLink href="#article-2">
+            facilis quidem qui est? Eius, reprehenderit.
+          </ArticleLink>
         </Grid>
         <Grid>
-          <p class="text-4xl">
+          <ArticleLink href="#article-3">
             Molestias quasi, illo quisquam sed, deserunt corporis rem quam
             incidunt.
-          </p>
-          <p class="text-4xl">
+          </ArticleLink>
+          <ArticleLink href="#article-4">
             suscipit quia dolorum corrupti voluptatum quibusdam,
-          </p>
+          </ArticleLink>
         </Grid>
         <Grid>
-          <p class="text-4xl">
-            Molestias quasi, illo quisquam sed, deserunt corporis rem quam
-            incidunt.
-          </p>
-          <p class="text-4xl">
+          <ArticleLink href="#article-5">
+            facilis quidem qui est? Eius, reprehenderit.
+          </ArticleLink>
+          <ArticleLink href="#article-6">
             suscipit quia dolorum corrupti voluptatum quibusdam,
-          </p>
+          </ArticleLink>
         </Grid>
       </MasonaryGrid>
     </section>
