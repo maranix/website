@@ -1,10 +1,11 @@
 ---
 interface Props {
   id: string;
-  style?: string;
+  minWidth?: string;
+  spacing?: string;
 }
 
-const { id, style = "min-w-[100px]" } = Astro.props;
+const { id, minWidth = "min-w-[100px]", spacing = "m-1" } = Astro.props;
 
 /// ???????????????????
 /// Why am i doing this
@@ -19,11 +20,11 @@ let render = await Promise.all(slots);
 
 let elements: string[] = render[0]
   .split("</a>")
-  .map((item: string) => `<li>${item}</a></li>`);
+  .map((item: string) => `<li class=${spacing}>${item}</a></li>`);
 
 elements.pop();
 ---
 
-<ul id={id} class={style}>
+<ul id={id} class={minWidth}>
   {elements.map((el: string) => <Fragment set:html={el} />)}
 </ul>
