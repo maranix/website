@@ -1,0 +1,11 @@
+---
+interface Props {
+  gap?: string;
+}
+
+const { gap = 4 } = Astro.props;
+---
+
+<div class=`grid gap-${gap}`>
+  <slot />
+</div>

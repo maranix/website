@@ -1,0 +1,17 @@
+---
+interface Props {
+  id: string;
+  minCols?: string;
+  maxCols?: string;
+  gap?: string;
+}
+
+const { id, minCols = 2, maxCols = 3, gap = 4 } = Astro.props;
+---
+
+<div
+  id={id}
+  class=`grid grid-cols-${minCols} md:grid-cols-${maxCols} gap-${gap}`
+>
+  <slot />
+</div>

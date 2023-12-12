@@ -1,25 +1,101 @@
 ---
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import Grid from "../layouts/Grid.astro";
+import MasonaryGrid from "../layouts/MasonaryGrid.astro";
 import Page from "../layouts/Page.astro";
 ---
 
 <Page title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <main class="m-auto max-w-[1280px] p-6">
-    <section id="intro">
-      <h1 class="font-sans text-6xl font-bold text-secondary mb-6">
+    <section id="intro" class="my-28">
+      <h1 class="font-sans text-4xl font-bold text-secondary mb-6">
         Raman Verma
       </h1>
-      <h2 class="font-sans text-4xl font-bold">
+      <h2 class="font-sans text-6xl font-bold">
         Software Developer<br />
          Creating Interoperable<br />
          Platform Solutions
       </h2>
     </section>
-    <!-- <section id="work" class="mt-24">
-      <h3 class="font-sans text-6xl font-bold">Work</h3>
+    <section id="work" class="my-24">
+      <MasonaryGrid id="grid-work" maxCols="4">
+        <Grid>
+          <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+            alt=""
+          />
+          <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
+            alt=""
+          />
+        </Grid>
+        <Grid>
+          <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
+            alt=""
+          />
+          <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
+            alt=""
+          />
+        </Grid>
+        <Grid>
+          <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
+            alt=""
+          />
+          <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
+            alt=""
+          />
+        </Grid>
+        <Grid>
+          <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
+            alt=""
+          />
+          <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
+            alt=""
+          />
+        </Grid>
+      </MasonaryGrid>
     </section>
-    <section id="blog" class="mt-24">
-      <h4 class="font-sans text-6xl font-bold">Article</h4>
-    </section> -->
+    <section id="blog" class="my-24 mt-48">
+      <MasonaryGrid id="grid-blog">
+        <Grid>
+          <a class="text-4xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </a>
+          <a class="text-4xl">facilis quidem qui est? Eius, reprehenderit.</a>
+        </Grid>
+        <Grid>
+          <p class="text-4xl">
+            Molestias quasi, illo quisquam sed, deserunt corporis rem quam
+            incidunt.
+          </p>
+          <p class="text-4xl">
+            suscipit quia dolorum corrupti voluptatum quibusdam,
+          </p>
+        </Grid>
+        <Grid>
+          <p class="text-4xl">
+            Molestias quasi, illo quisquam sed, deserunt corporis rem quam
+            incidunt.
+          </p>
+          <p class="text-4xl">
+            suscipit quia dolorum corrupti voluptatum quibusdam,
+          </p>
+        </Grid>
+      </MasonaryGrid>
+    </section>
   </main>
 </Page>
