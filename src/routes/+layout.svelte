@@ -1,7 +1,9 @@
 <script lang="ts">
+	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
+<Nav />
 <main>
 	<slot />
 </main>
@@ -27,6 +29,10 @@
 		font-family: var(--font-jost);
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+	}
+
+	:global(html) {
+		overflow-x: hidden;
 	}
 
 	:global(body) {
